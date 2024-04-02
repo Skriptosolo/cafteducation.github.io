@@ -1,0 +1,257 @@
+:root {
+  --primary: #fff235;
+  --bg: #1d3258;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: rgb(48, 48, 196);
+  color: white;
+  margin: 5px auto;
+  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+aside {
+  z-index: 999;
+}
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(29, 50, 88, 0.8);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* z-index: 9999; */
+}
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+.navbar .navbar-nav a::after {
+  /* content: "";
+  display: block; */
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scalex(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.space {
+  min-height: 10vh;
+}
+h1 {
+  margin: 10px auto;
+  text-align: center;
+  background-color: #2c1563;
+}
+
+h2 {
+  text-align: center;
+  background-color: rgb(12, 87, 71);
+  margin-bottom: 20px;
+}
+
+h3 {
+  background-color: rgb(3, 3, 3);
+  justify-content: center;
+  margin: 5px auto;
+  width: 350px;
+  text-align: center;
+}
+
+p {
+  margin: 20px auto;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+a {
+  margin: 5px auto;
+  width: 350px;
+  color: yellow;
+  font-style: italic;
+  justify-content: center;
+}
+
+li {
+  margin: 20px auto;
+}
+
+img {
+  margin: 20px auto;
+  width: 500px;
+}
+
+.sekar-jagung {
+  background-color: #fff; /* Warna latar belakang putih */
+  padding: 10px; /* Padding untuk memberikan ruang di sekitar gambar */
+}
+.teknik {
+  margin-left: 20px;
+}
+
+figure {
+  text-align: center; /* Mengatur teks dan konten dalam figure menjadi rata tengah */
+}
+
+figure img {
+  max-width: 100%; /* Membuat gambar tidak melebihi lebar kontainer figure */
+  height: auto; /* Mengatur tinggi gambar secara otomatis sesuai lebar */
+  display: block; /* Mengubah gambar menjadi blok agar bisa diberikan margin auto */
+  margin: 0 auto; /* Memberikan margin otomatis di atas dan bawah serta mengatur posisi horizontal ke tengah */
+}
+
+figure figcaption {
+  margin-top: 6px; /* Memberikan margin atas pada caption */
+  margin-bottom: 20px;
+  font-style: italic; /* Menjadikan teks caption menjadi italic */
+}
+
+/* Gaya dasar untuk tombol download */
+.download-button {
+  width: auto;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e0fc7a; /* Warna latar belakang tombol */
+  color: #0b0fd1; /* Warna teks tombol */
+  border-radius: 5px; /* Membuat sudut tombol menjadi sedikit bulat */
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Transisi saat tombol dihover */
+}
+
+/* Efek hover saat kursor di atas tombol */
+.download-button:hover {
+  background-color: #74882d; /* Ubah warna latar belakang saat dihover */
+}
+
+/* Efek aktif saat tombol ditekan */
+.download-button:active {
+  background-color: #5e8000; /* Ubah warna latar belakang saat ditekan */
+}
+
+/* Stil teks pada tombol */
+.download-button span {
+  font-weight: bold;
+}
+
+/* Memberikan margin atas dan bawah pada tombol */
+.download-button + .download-button {
+  margin-top: 10px;
+}
+
+/* navigasi */
+label {
+  display: none;
+}
+.menu-icon {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.sidebar {
+  position: fixed;
+  left: -280px;
+  top: 0;
+  width: 280px;
+  height: 100%;
+  background-color: #220b72;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: left 0.3s ease;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 15px;
+  border-bottom: 1px solid #fbfafc;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  color: #ffd700;
+}
+
+#menu-toggle {
+  display: none; /* Hide the default checkbox */
+}
+
+/* Style for the custom toggle button */
+.menu-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #171053;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle-btn:hover {
+  transform: scale(1.1);
+}
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 80%;
+  }
+  img {
+    width: 300px;
+  }
+}
