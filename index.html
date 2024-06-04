@@ -1,3 +1,48 @@
+ChatGPT
+
+Daftar
+Anda
+Buatkan kode html undian nomor 1 sampai 9
+ChatGPT
+ChatGPT
+Tentu, berikut ini adalah contoh kode HTML untuk membuat daftar nomor dari 1 sampai 9:
+
+html
+Salin kode
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daftar Nomor 1 sampai 9</title>
+</head>
+<body>
+
+<ol>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+</ol>
+
+</body>
+</html>
+Kode ini menggunakan elemen <ol> (ordered list) untuk membuat daftar yang berurutan, dan masing-masing nomor disajikan dalam elemen <li> (list item).
+
+
+Anda
+Bukan begitu, maksud saya, kode untuk memilih nomor undian yang isinya nomo 1 sampai 9
+ChatGPT
+ChatGPT
+Oh, mengerti! Kamu ingin membuat kode HTML untuk memilih nomor undian dari 1 sampai 9. Berikut ini adalah contoh kode HTML dengan tombol-tombol untuk memilih nomor:
+
+html
+Salin kode
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,3 +73,177 @@
 
 </body>
 </html>
+Dalam kode ini, terdapat sebuah form dengan dropdown (select) untuk memilih nomor dari 1 sampai 9, dan sebuah tombol submit. Kamu dapat menambahkan logika JavaScript untuk melakukan sesuatu dengan nomor yang dipilih setelah tombol submit ditekan.
+
+
+Anda
+Bukan begitu, maksud saya, saya ingin membuat undian untuk peseta yang tampil dalam pentas seni, saya ingin memilih urutan sampil secara acak, jadi buatkan saya kode html agar peserta dapat mendapatkan nomor urut secara acak
+ChatGPT
+ChatGPT
+Baiklah, berikut adalah contoh kode HTML yang menggunakan JavaScript untuk membuat undian nomor urut secara acak untuk peserta yang tampil dalam pentas seni:
+
+html
+Salin kode
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undian Nomor Urut Peserta</title>
+<script>
+  function undiNomor() {
+    var peserta = document.getElementById("jumlahPeserta").value;
+    var nomorAcak = [];
+    
+    // Mengisi array dengan nomor dari 1 sampai jumlah peserta
+    for (var i = 1; i <= peserta; i++) {
+      nomorAcak.push(i);
+    }
+    
+    // Mengacak nomor urut
+    nomorAcak.sort(function() {
+      return 0.5 - Math.random();
+    });
+    
+    // Menampilkan nomor urut yang sudah diacak
+    var hasilUndian = document.getElementById("hasilUndian");
+    hasilUndian.innerHTML = "Nomor urut peserta: " + nomorAcak.join(", ");
+  }
+</script>
+</head>
+<body>
+
+<h2>Undian Nomor Urut Peserta</h2>
+
+<label for="jumlahPeserta">Jumlah Peserta:</label>
+<input type="number" id="jumlahPeserta" name="jumlahPeserta" min="1" value="1">
+<button onclick="undiNomor()">Undi Nomor Urut</button>
+
+<p id="hasilUndian"></p>
+
+</body>
+</html>ChatGPT
+
+Daftar
+Anda
+Buatkan kode html undian nomor 1 sampai 9
+ChatGPT
+ChatGPT
+Tentu, berikut ini adalah contoh kode HTML untuk membuat daftar nomor dari 1 sampai 9:
+
+html
+Salin kode
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daftar Nomor 1 sampai 9</title>
+</head>
+<body>
+
+<ol>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+</ol>
+
+</body>
+</html>
+Kode ini menggunakan elemen <ol> (ordered list) untuk membuat daftar yang berurutan, dan masing-masing nomor disajikan dalam elemen <li> (list item).
+
+
+Anda
+Bukan begitu, maksud saya, kode untuk memilih nomor undian yang isinya nomo 1 sampai 9
+ChatGPT
+ChatGPT
+Oh, mengerti! Kamu ingin membuat kode HTML untuk memilih nomor undian dari 1 sampai 9. Berikut ini adalah contoh kode HTML dengan tombol-tombol untuk memilih nomor:
+
+html
+Salin kode
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pilih Nomor Undian</title>
+</head>
+<body>
+
+<h2>Pilih Nomor Undian</h2>
+
+<form>
+  <label for="nomor">Pilih Nomor:</label>
+  <select id="nomor" name="nomor">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+Dalam kode ini, terdapat sebuah form dengan dropdown (select) untuk memilih nomor dari 1 sampai 9, dan sebuah tombol submit. Kamu dapat menambahkan logika JavaScript untuk melakukan sesuatu dengan nomor yang dipilih setelah tombol submit ditekan.
+
+
+Anda
+Bukan begitu, maksud saya, saya ingin membuat undian untuk peseta yang tampil dalam pentas seni, saya ingin memilih urutan sampil secara acak, jadi buatkan saya kode html agar peserta dapat mendapatkan nomor urut secara acak
+ChatGPT
+ChatGPT
+Baiklah, berikut adalah contoh kode HTML yang menggunakan JavaScript untuk membuat undian nomor urut secara acak untuk peserta yang tampil dalam pentas seni:
+
+html
+Salin kode
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undian Nomor Urut Peserta</title>
+<script>
+  function undiNomor() {
+    var peserta = document.getElementById("jumlahPeserta").value;
+    var nomorAcak = [];
+    
+    // Mengisi array dengan nomor dari 1 sampai jumlah peserta
+    for (var i = 1; i <= peserta; i++) {
+      nomorAcak.push(i);
+    }
+    
+    // Mengacak nomor urut
+    nomorAcak.sort(function() {
+      return 0.5 - Math.random();
+    });
+    
+    // Menampilkan nomor urut yang sudah diacak
+    var hasilUndian = document.getElementById("hasilUndian");
+    hasilUndian.innerHTML = "Nomor urut peserta: " + nomorAcak.join(", ");
+  }
+</script>
+</head>
+<body>
+
+<h2>Undian Nomor Urut Peserta</h2>
+
+<label for="jumlahPeserta">Jumlah Peserta:</label>
+<input type="number" id="jumlahPeserta" name="jumlahPeserta" min="1" value="1">
+<button onclick="undiNomor()">Undi Nomor Urut</button>
+
+<p id="hasilUndian"></p>
+
+</body>
+  </html>
